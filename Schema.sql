@@ -30,7 +30,7 @@ CREATE TABLE VoteCast
 	(senator_ID			VARCHAR(4),
 	 vote_number		NUMERIC(3,0),
 	 vote_option		VARCHAR(1),
-	 PRIMARY KEY (senator_ID),
+	 PRIMARY KEY (senator_ID, vote_number),
 	 FOREIGN KEY (senator_ID) REFERENCES Senator (member_id),
 	 FOREIGN KEY (vote_number) REFERENCES Vote (vote_number)
 	);

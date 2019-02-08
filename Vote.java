@@ -24,6 +24,10 @@ public class Vote {
 		this.dateTime = LocalDateTime.parse(dateTime, formatter);
 	}
 
+	public String getNumber(){
+		return "" + number;
+	}
+
 	// **EVERYTIME** you plan to create sets or maps of user-defined classes (cough, cough)
 	// you need to **OVERRIDE** the default equals() and hashCode().
 	//
@@ -47,7 +51,7 @@ public class Vote {
 	// When Java needs to convert any object to string, the toString() method is called.
 	// This one returns **ALL** the Vote's attributes in a comma-separated list. Convenient, no?
 	public String toString() {
-		return congress + ", " + session + ", " + year + ", " + number + ", " + getDate();
+		return number + ", " + congress + ", " + session + ", " + year + ", " + getDate();
 	}
 	
 	private String getDate() {

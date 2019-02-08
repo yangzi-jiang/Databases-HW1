@@ -13,6 +13,10 @@ public class Senator {
 		this.state = state;
 	}
 
+	public String getId(){
+		return id;
+	}
+
 	// **EVERYTIME** you plan to create sets or maps of user-defined classes (cough, cough)
 	// you need to **OVERRIDE** the default equals() and hashCode().
 	//
@@ -36,7 +40,7 @@ public class Senator {
 	// When Java needs to convert any object to string, the toString() method is called.
 	// This one returns **ALL** the Senator's attributes in a comma-separated list. Convenient, no?
 	public String toString() {
-		return quote(id) + ", " + quote(lastName) + ", " + quote(firstName) + ", " + quote(party) + ", " + quote(state);
+		return quote(id) + ", " + quote(firstName) + ", " + quote(lastName) + ", " + quote(party) + ", " + quote(state);
 	}
 
 	private String quote(String text) {
